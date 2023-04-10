@@ -44,6 +44,7 @@ body{
 
 .menu_nivel  {
     display: flex;
+    justify-content: center;
     background-color: #0B1533;
     padding: 10px;
 }
