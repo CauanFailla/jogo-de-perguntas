@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>QuestCheck</h1>
+        </div>
+        <div class="menu">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Explorar</a>
+                <a href="#">Sobre</a>
+            </nav>
+        </div>
+        <div  class="menu_nivel">
+            <p class="p_pts">0</p>
+            <div class="barra">
+                <div  class="exp"></div>
+            </div>
+            <p class="exp_pts_ex">0/200</p>
+        </div>
+    </header>
+    <main>
+        <section class="pontos">
+            <h1 class="pt"></h1>
+        </section>
+        <section  class="bt_começar">
+            <button onclick="iniciar()">Iniciar</button>
+        </section>
+        <section class="perguntas">
+            <div class="per_1">
+                <p><strong>Qual a capital do Brasil?</strong></p>
+                <input type="radio" name="per1" id="sp">
+                <label for="sp">São Paulo</label> <br>
+                <input type="radio" name="per1" id="rj">
+                <label for="rj">Rio de Janeiro</label> <br>
+                <input type="radio" name="per1" id="bl">
+                <label for="bl">Brasilia</label> <br>
+                <div class="bts">
+                    <input onclick="confirma_per1()" type="button" value="Confirmar">
+                    <input onclick="resetar()" type="button" value="Encerrar">
+                </div>
+            </div>
+
+            <div class="per_2">
+                <p>Quando foi a independência do Brasil?</p>
+                <input type="radio" name="per2" id="ano1">
+                <label for="ano1">1822</label> <br>
+                <input type="radio" name="per2" id="ano2">
+                <label for="ano2">1842</label> <br>
+                <input type="radio" name="per2" id="ano3">
+                <label for="ano3">1823</label> <br>
+                <div class="bts">
+                    <input onclick="confirma_per2()" type="button" value="Confirmar">
+                    <input onclick="resetar()" type="button" value="Encerrar">
+                </div>
+            </div>
+
+            <div class="per_3">
+                <p>O que é um sistema capitalista?</p>
+                <input type="radio" name="per3" id="sist1">
+                <label for="sist1">Exploração de fins lucarativos</label> <br>
+                <input type="radio" name="per3" id="sist2">
+                <label for="sist2">Igualdade</label> <br>
+                <input type="radio" name="per3" id="sist3">
+                <label for="sist3">Bens publicos</label> <br>
+                <div class="bts">
+                    <input onclick="confirma_per3()" type="button" value="Confirmar">
+                    <input onclick="resetar()" type="button" value="Encerrar">
+                </div>
+            </div>
+
+            <div class="per_4">
+                <p>Fui ao mercado, e me deparei com o preço da carne, estava com 42% de desconto, sendo que o preço real é R$32,00 o kg. Se eu comprar 5 kg qual o preço que irei pagar?</p>
+                <input type="radio" name="per4" id="pre1">
+                <label for="pre1">R$120,43</label> <br>
+                <input type="radio" name="per4" id="pre2">
+                <label for="pre2">R$82,42</label> <br>
+                <input type="radio" name="per4" id="pre3">
+                <label for="pre3">R$92,80</label> <br>
+                <div class="bts">
+                    <input onclick="confirma_per4()" type="button" value="Confirmar">
+                    <input onclick="resetar()" type="button" value="Encerrar">
+                </div>
+            </div>
+
+            <div class="per_5">
+                <p>Apliquei R$300,00 em uma aplicação, de juro simples, que rende 12%aa e pretendo retirar o dinheiro em 5 anos. Qual será o valor que irei retirar?</p>
+                <input type="radio" name="per5" id="jur1">
+                <label for="jur1">R$310,40</label> <br>
+                <input type="radio" name="per5" id="jur2">
+                <label for="jur2">R$480,00</label> <br>
+                <input type="radio" name="per5" id="jur3">
+                <label for="jur3">R$500,50</label> <br>
+                <div class="bts">
+                    <input onclick="confirma_per5()" type="button" value="Finalizar">
+                    <input onclick="resetar()" type="button" value="Encerrar">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/*MOBILE FIRST*/
+
+:root {
+    --cor1: #071F66;
+    --cor2: #6188FF;
+    --cor3: #0B1533;
+    --cor4: #0D37C0;
+    --cor5: #0D37C0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor2);
+}
+
+.logo {
+    background-color: var(--cor3);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.menu  {
+    background-color: #425caa;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.menu_nivel  {
+    display: flex;
+    background-color: #0B1533;
+    padding: 10px;
+}
+
+.menu_nivel p {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.barra{
+    background-color: white;
+    width: 200px;
+    height: 13px;
+}
+
+.exp {
+    width: 0px;
+    height: 13px;
+    background-color: rgb(3, 160, 3);
+}
+
+.per_1,.per_2,  .per_3,.per_4, .per_5 {
+    display: none;
+}
+
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 80vw;
+    height: 400px;
+    background-color: rgb(233, 233, 233);
+    padding-top: 20px;
+    box-shadow: 0px 0px  11px  rgba(0, 0, 0, 0.418);
+}
+
+.bt_começar   {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.bt_começar button {
+    background-color: var(--cor1);
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 4px 23px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.perguntas {
+    font-size: 0.8em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.perguntas p {
+    margin-bottom: 10px;
+}
+
+input[type='button'] {
+    display: block;
+    margin: auto;
+    background-color: var(--cor4);
+    border: none;
+    padding: 3px 12px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.bts {
+    display: flex;
+    gap: 5px;
+}
+
+/*PC*/
+@media screen and (min-width: 700px) {
+    main {
+        width: 60vw;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .menu {
+        font-size: 1em;
+    }
+
+    .perguntas {
+        font-size: 1em;
+    }
+}
