@@ -45,7 +45,7 @@ body{
 .menu_nivel  {
     display: flex;
     justify-content: center;
-    background-color: #0B1533;
+    background-color: #425caa;
     padding: 10px;
 }
 
@@ -106,7 +106,7 @@ main {
 }
 
 .perguntas {
-    font-size: 0.8em;
+    font-size: 0.9em;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -16,7 +16,7 @@ let res3 = document.getElementsByName('per3')
 let res4 = document.getElementsByName('per4')
 let res5 = document.getElementsByName('per5')
 
-
+let acertos = Number(0)
 let pt = Number(0)
 let xp_pts = Number(0)
 let p = Number(0)
@@ -50,6 +50,7 @@ function confirma_per1()  {
         per_2.style.display = 'block'
         if (res1[2].checked) {
             xp_pts += 50
+            acertos += 1
             xp.style.width  = xp_pts + 'px'
             pt += 5 
             exp_pts_ex.innerHTML = `${xp_pts}/200`
@@ -69,6 +70,7 @@ function confirma_per2() {
         per_3.style.display  = 'block'
         if  (res2[0].checked) {
             xp_pts += 50
+            acertos += 1
             xp.style.width  = xp_pts + 'px'
             pt  +=  5
             exp_pts_ex.innerHTML = `${xp_pts}/200`
@@ -88,6 +90,7 @@ function confirma_per3() {
         per_4.style.display = 'block'
         if (res3[0].checked) {
             xp_pts += 50 
+            acertos += 1
             xp.style.width  = xp_pts + 'px'
             pt +=  5
             exp_pts_ex.innerHTML = `${xp_pts}/200`
@@ -107,6 +110,7 @@ function confirma_per4() {
         per_5.style.display  = 'block'
         if (res4[2].checked) {
             xp_pts += 50
+            acertos += 1
             xp.style.width  = xp_pts + 'px'
             pt  += 5
             exp_pts_ex.innerHTML = `${xp_pts}/200`
@@ -125,15 +129,23 @@ function confirma_per5() {
         per_5.style.display = 'none'
         if (res5[1].checked) {
             xp_pts += 50 
+            acertos += 1
             xp.style.width  = xp_pts + 'px'
             pt += 5
             exp_pts_ex.innerHTML = `${xp_pts}/200`
         } else {
             pt -= 5
         }
+        if (acertos == 5) {
+            alert(`Acertos: ${acertos}/5. Parabens você acertou todas as perguntas!`)
+        } else if (acertos >= 3 && acertos <= 4) {
+            alert(`Acertos: ${acertos}/5. Pontuação aceitavel!`)
+        } else if (acertos <= 2) {
+            alert(`Acertos: ${acertos}/5. Infelizmente você foi pessimo!`)
+        }
         atualizar_pts()
     } else {
-        alert('Por favor marque uma s opções!')
+        alert('Por favor marque uma das opções!')
     }    
     subir_nivel()
 }
